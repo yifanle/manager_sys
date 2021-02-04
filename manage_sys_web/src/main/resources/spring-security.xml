@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <!-- 配置不拦截的资源 -->
+    <security:http pattern="/pages/login.html" security="none"/>
+    <security:http pattern="/loginPage" security="none"/>
+    <security:http pattern="/pages/regist.html" security="none"/>
+    <security:http pattern="/registPage" security="none"/>
+    <security:http pattern="/user/register" security="none"/>
+    <security:http pattern="/css/**" security="none"/>
+    <security:http pattern="/js/**" security="none"/>
+    <security:http pattern="/layer/**" security="none"/>
+    <security:http pattern="/img/**" security="none"/>
+    <security:http pattern="/plugins/**" security="none"/>
+    <!--
+    	配置具体的规则
+    	auto-config="true"	不用自己编写登录的页面，框架提供默认登录页面
+    	use-expressions="false"	是否使用SPEL表达式（没学习过）
+    -->
+    <security:http auto-config="false" use-expressions="false">
+        <!-- 配置具体的拦截的规则 pattern="请求路径的规则" access="访问系统的人，必须有ROLE_USER的角色" -->
+        <!-- 增加权限过滤器,采用数据库方式获取权限 -->
+        <security:custom-filter ref="filterSecurityInterceptor" before="FILTER_SECURITY_INTERCEPTOR"/>
+        <!-- 定义跳转的具体的页面 -->
+        <security:form-login
+                login-page="/loginPage"
+                login-processing-url="/login"
+                default-target-url="/index"
+                authentication-failure-url="/loginPage"
+                always-use-default-target="true"
+        />
+
+        <!-- 关闭跨域请求 -->
+        <security:csrf disabled="true"/>
+        <!-- 退出 -->
+        <security:logout invalidate-session="true" logout-url="/user/logout" logout-success-url="/loginPage" />
+    </security:http>
+
+    <!-- 切换成数据库中的用户名和密码 -->
+    <security:authentication-manager id="authenticationManager">
+        <security:authentication-provider user-service-ref="userService">
+            <!-- 配置加密的方式-->
+            <security:password-encoder ref="passwordEncoder"/>
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+    <!-- 配置加密类 -->
+    <bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+
+    <!-- 配置 验证过滤器, 此过滤器取代系统的XML权限过滤 , 此过滤器配置完毕之后存放到 系统缺省的过滤链中-->
+    <bean id="filterSecurityInterceptor" class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
+        <!-- 需要认证管理器, 通过它可以获取 管理员已经拥有的角色信息  ，
+            由于id已经被org.springframework.security.authenticationManager默认了。不能更改，所以用别名-->
+        <property name="authenticationManager" ref="authenticationManager"></property>
+        <!-- 决策器 -->
+        <property name="accessDecisionManager" ref="roleAccessDecisionManager" />
+        <!-- permissionService ，security可以通过url得到角色名称 -->
+        <property name="securityMetadataSource" ref="permissionService" />
+    </bean>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
