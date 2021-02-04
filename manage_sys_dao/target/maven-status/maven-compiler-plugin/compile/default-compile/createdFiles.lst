@@ -1,0 +1,10 @@
+com\muzile\manage_sys\dao\IProductDao.class
+com\muzile\manage_sys\dao\IOrderDao.class
+com\muzile\manage_sys\dao\IMemberDao.class
+com\muzile\manage_sys\dao\IRoleDao.class
+com\muzile\manage_sys\dao\IStockDao.class
+com\muzile\manage_sys\dao\IPermissionDao.class
+com\muzile\manage_sys\dao\IUserDao.class
+com\muzile\manage_sys\dao\IPOrderDao.class
+com\muzile\manage_sys\dao\IChartDao.class
+com\muzile\manage_sys\dao\ISysLogDao.class
