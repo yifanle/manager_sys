@@ -21,5 +21,22 @@ webapp中的页面及JS文件太多未上传,文件在结尾:sparkles:
 3、通过Spring的AOP的前置通知及后置通知实现系统中每一步操作的记录。<br><br>
 4、首页展示每种商品的销量统计图、每日销售统计图<br><br>
 
+系统预览：<br><br>
+>首页:smiley_cat:<br>
+
+![首页](https://img-blog.csdnimg.cn/20210204165650835.png)
+
+>添加产品:smiley_cat:<br>
+
+![添加产品](https://img-blog.csdnimg.cn/20210204170010891.png)
+
+>权限详情:smiley_cat:<br>
+
+![权限详情](https://img-blog.csdnimg.cn/20210204170305447.png)
+
+>日志管理:smiley_cat:<br>
+
+![日志管理](https://img-blog.csdnimg.cn/202102041704436.png)
+
 喜欢请为我点个star:star:拒绝下次一定，从你我做起！:cherry_blossom:<br><br>
 完整代码获取链接：https://wws.lanzous.com/iyWyRlb3qof :coffee:
