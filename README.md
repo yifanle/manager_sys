@@ -39,4 +39,4 @@ webapp中的页面及JS文件太多未上传,文件在结尾:sparkles:
 ![日志管理](https://img-blog.csdnimg.cn/202102041704436.png)
 
 喜欢请为我点个star:star:拒绝下次一定，从你我做起！:cherry_blossom:<br><br>
-完整代码获取链接：https://wws.lanzous.com/iyWyRlb3qof :coffee:
+完整代码获取链接：https://wws.lanzous.com/iyWyRlb3qof :coffee: 
