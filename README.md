@@ -44,3 +44,12 @@ webapp中的页面及JS文件太多未上传,文件在结尾:sparkles:
 
 喜欢请不要吝啬您的star:star:拒绝下次一定，从你我做起！:cherry_blossom:<br><br>
 完整代码获取链接：https://wws.lanzous.com/iyWyRlb3qof :coffee: 
+
+**您也可以使用为您提供的war包运行**
+>操作方法
+
+1.下载[manager_sys_web.war](https://github.com/yifanle/manager_sys/releases/tag/v1.0.0)<br>
+2.将war文件放入tomcat的webapps目录下<br>
+3.到bin目录下启动tomcat<br>
+4.浏览器访问：localhost:8080/manager_sys_web/<br>
+5.IP及端口以实际情况更改！
