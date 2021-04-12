@@ -51,5 +51,9 @@ webapp中的页面及JS文件太多未上传,文件在结尾:sparkles:
 1.下载[manager_sys_web.war](https://github.com/yifanle/manager_sys/releases/tag/v1.0.0)<br>
 2.将war文件放入tomcat的webapps目录下<br>
 3.到bin目录下启动tomcat<br>
-4.浏览器访问：localhost:8080/manager_sys_web/<br>
+4.浏览器访问：localhost:8080/manage_sys_web/<br>
 5.IP及端口以实际情况更改！
+
+>数据库要求
+localhost
+-u root -p 123123
