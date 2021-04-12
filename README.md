@@ -54,6 +54,6 @@ webapp中的页面及JS文件太多未上传,文件在结尾:sparkles:
 4.浏览器访问：localhost:8080/manage_sys_web/<br>
 5.IP及端口以实际情况更改！
 
->数据库要求
-localhost
+>数据库要求<br>
+localhost 
 -u root -p 123123
