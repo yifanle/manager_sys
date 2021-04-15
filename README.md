@@ -55,5 +55,8 @@ webapp中的页面及JS文件太多未上传,文件在结尾:sparkles:
 5.IP及端口以实际情况更改！
 
 >数据库要求<br>
-localhost 
+
+sql文件下载[manager_sys_web.sql](https://github.com/yifanle/manager_sys/releases/tag/sql)<br>
+
+localhost <br>
 -u root -p 123123
