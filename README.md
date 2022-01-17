@@ -1,5 +1,5 @@
 # manager_sys
-:heart: 仓库管理系统，一个毕设的案例
+:heart: 仓库管理系统，一个毕设
 
 webapp中的页面及JS文件太多未上传,文件在结尾:sparkles:
 
