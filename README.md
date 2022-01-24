@@ -43,7 +43,7 @@ webapp中的页面及JS文件太多未上传,文件在结尾:sparkles:
 ![日志管理](https://img-blog.csdnimg.cn/202102041704436.png)
 
 喜欢请不要吝啬您的star:star:拒绝下次一定，从你我做起！:cherry_blossom:<br><br>
-完整代码获取链接：https://wws.lanzous.com/iyWyRlb3qof :coffee: 
+完整代码获取链接：https://wwe.lanzouo.com/iyWyRlb3qof :coffee: 
 
 **您也可以使用为您提供的war包运行**
 >操作方法
